@@ -1,0 +1,16 @@
+--- origsrc/telepathy-logger-0.1.1/telepathy-logger/Makefile.am	2010-02-25 21:43:20.000000000 -0600
++++ src/telepathy-logger-0.1.1/telepathy-logger/Makefile.am	2010-05-07 00:30:42.454160000 -0500
+@@ -57,8 +57,12 @@ libtelepathy_logger_la_SOURCES = \
+ 		log-store-factory.c		\
+ 		observer.c
+ 
++libtelepathy_logger_la_LDFLAGS = \
++	-no-undefined
++
+ libtelepathy_logger_la_LIBADD = \
+-	$(top_builddir)/extensions/libtpl-extensions.la
++	$(top_builddir)/extensions/libtpl-extensions.la \
++	$(LIBTPL_LIBS)
+ 
+ check_c_sources = \
+ 	$(libtelepathy_logger_la_SOURCES)	\
