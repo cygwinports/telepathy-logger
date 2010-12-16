@@ -1,0 +1,20 @@
+--- origsrc/telepathy-logger-0.1.7/extensions/Makefile.am	2010-08-30 03:52:10.000000000 -0500
++++ src/telepathy-logger-0.1.7/extensions/Makefile.am	2010-12-16 02:07:03.346652000 -0600
+@@ -75,6 +75,7 @@ lib_LTLIBRARIES = libtpl-extensions.la
+ libtpl_extensions_la_SOURCES =
+ libtpl_extensions_la_LIBADD = libtpl-extensions-convenience.la
+ libtpl_extensions_la_LDFLAGS = \
++	-no-undefined \
+     -version-info "$(TPL_EXT_LT_CURRENT)":"$(TPL_EXT_LT_REVISION)":"$(TPL_EXT_LT_AGE)"
+ endif # ENABLE_PUBLIC_EXTENSIONS
+ 
+--- origsrc/telepathy-logger-0.1.7/telepathy-logger/abi.am	2010-06-17 09:17:17.000000000 -0500
++++ src/telepathy-logger-0.1.7/telepathy-logger/abi.am	2010-12-16 02:14:29.561338300 -0600
+@@ -4,6 +4,7 @@
+ # that vim quickfix mode (:make) doesn't interpret the libtool --mode=link
+ # command as an error message in a bizarrely named file
+ libtelepathy_logger_la_LDFLAGS = \
++	-no-undefined \
+     -version-info "$(TPL_LT_CURRENT)":"$(TPL_LT_REVISION)":"$(TPL_LT_AGE)"
+ 
+ _gen/abi.txt: libtelepathy-logger.la abi.am

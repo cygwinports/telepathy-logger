@@ -1,0 +1,13 @@
+inherit gnome2
+
+DESCRIPTION="Telepathy IRC connection manager"
+HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
+SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
+PATCH_URI="0.1.7-no-undefined.patch"
+
+PKG_NAMES="${PN} lib${PN}1 lib${PN}-devel"
+telepathy_logger_CONTENTS="--exclude=gtk-doc etc/ usr/lib/telepathy/ usr/share/"
+libtelepathy_logger1_CONTENTS="usr/bin/*-1.dll"
+libtelepathy_logger_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+
+CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy"

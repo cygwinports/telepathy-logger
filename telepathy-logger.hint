@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: GConf2 libdbus-glib_1_2 libgcc1 libglib2.0_0 libtelepathy-glib0 libtelepathy-logger0
+requires: libglib2.0_0 libtelepathy-glib0 libtelepathy-logger1
 sdesc: "Telepathy observer client"
 ldesc: "Telepathy-Logger is a headless Observer client that logs 
 information received by the Telepathy framework.  It features a 
