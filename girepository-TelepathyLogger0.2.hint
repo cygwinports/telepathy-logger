@@ -1,6 +1,7 @@
 category: Gnome Net
-requires: libglib2.0_0 libtelepathy-glib0 libtelepathy-logger2
-sdesc: "Telepathy observer client"
+requires: libtelepathy-logger2 girepository-GLib2.0 girepository-TelepathyGLib0.12
+external-source: telepathy-logger
+sdesc: "Telepathy observer client library (GObject Introspection data)"
 ldesc: "Telepathy-Logger is a headless Observer client that logs 
 information received by the Telepathy framework.  It features a 
 Telepathy-style D-Bus API to expose logs and interesting information 
