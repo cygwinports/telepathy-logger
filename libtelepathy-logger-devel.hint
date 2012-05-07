@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: libtelepathy-logger2 libdbus-glib_1-devel libglib2.0-devel libsqlite3-devel libtelepathy-glib-devel libxml2-devel
+requires: libtelepathy-logger2 libglib2.0-devel libtelepathy-glib-devel libxml2-devel
 external-source: telepathy-logger
 sdesc: "Telepathy observer client library (development)"
 ldesc: "Telepathy-Logger is a headless Observer client that logs 

@@ -12,3 +12,5 @@ libtelepathy_logger_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/
 girepository_TelepathyLogger0_2_CONTENTS="usr/*/gir*/TelepathyLogger-0.2.*"
 
 CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy"
+
+KEEP_LA_FILES="none"
