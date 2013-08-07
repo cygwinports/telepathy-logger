@@ -1,9 +1,9 @@
 inherit gnome2
 
 NAME="telepathy-logger"
-VERSION=0.6.0
+VERSION=0.8.0
 RELEASE=1
-CATEGORY="GNOME"
+CATEGORY="Libs"
 SUMMARY="Telepathy observer client"
 DESCRIPTION="Telepathy-Logger is a headless Observer client that logs
 information received by the Telepathy framework.  It features a Telepathy-style
@@ -12,13 +12,12 @@ frequent contacts, etc.). It also provides a GLib-compatible client API for
 making bulk log requests (e.g. for display logs in applications without having
 to provide lots of information over D-Bus)."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
-SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
+SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.tar.bz2"
 PATCH_URI="0.1.7-no-undefined.patch"
 
-PKG_NAMES="${PN} lib${PN}3 lib${PN}-devel girepository-TelepathyLogger0.2"
-telepathy_logger_CONTENTS="--exclude=gir-1.0 --exclude=gtk-doc etc/ usr/lib/telepathy/ usr/share/"
+PKG_NAMES="${NAME} lib${NAME}3 lib${NAME}-devel girepository-TelepathyLogger0.2"
+telepathy_logger_CATEGORY="Net"
+telepathy_logger_CONTENTS="--exclude=gir-1.0 --exclude=gtk-doc etc/ usr/libexec/ usr/share/"
 libtelepathy_logger3_CONTENTS="usr/bin/*-3.dll"
 libtelepathy_logger_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 girepository_TelepathyLogger0_2_CONTENTS="usr/*/gir*/TelepathyLogger-0.2.*"
-
-CYGCONF_ARGS="--libexecdir=/usr/lib/telepathy"
