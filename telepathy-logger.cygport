@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="telepathy-logger"
-VERSION=0.8.0
+VERSION=0.8.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Telepathy observer client"
@@ -13,7 +13,10 @@ making bulk log requests (e.g. for display logs in applications without having
 to provide lots of information over D-Bus)."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/"
 SRC_URI="http://telepathy.freedesktop.org/releases/${NAME}/${NAME}-${VERSION}.tar.bz2"
-PATCH_URI="0.1.7-no-undefined.patch"
+PATCH_URI="
+	0.1.7-no-undefined.patch
+	0.8.1-gtk-doc-vpath.patch
+"
 
 PKG_NAMES="${NAME} lib${NAME}3 lib${NAME}-devel girepository-TelepathyLogger0.2"
 telepathy_logger_CATEGORY="Net"
